@@ -95,8 +95,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
-    <Compile Include="Model\Location.cs" />
-    <Compile Include="ViewModel\LocationViewmodel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -167,7 +165,12 @@
     <Resource Include="SampleData\LocationData\LocationData_Files\image04.png" />
     <Resource Include="SampleData\LocationData\LocationData_Files\image05.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DiveLogPortable\DiveLogPortable.csproj">
+      <Project>{8A11D1F3-706A-4355-B1A6-10C7DDEFB0FE}</Project>
+      <Name>DiveLogPortable</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
